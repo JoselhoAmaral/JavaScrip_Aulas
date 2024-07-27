@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.pai h1+p { /*Este comando diz: na classe pai, selecione o primeiro p após o h1*/
+    color: red;
+}
+
+.pai p+h1 { /*Este comando diz: na classe pai, selecione o primeiro h1 após o p*/
+    color: yellow;
+}
+
+.pai h1+p~p { /*Este comando diz: na classe pai, selecione todos os p após o primeiro p*/
+    color: green;
+}
+[meu-atributo=a] { /*Está é a forma de selecionar atributos.*/
+    color:blueviolet;
+}
+
+[atributoA~="2"] { /*É possível selecionar somente um dos valores do atributo para adicionar um estilo. Somente é necessário especificar o valor entre aspas duplas e colocar um tio.*/
+    color:blue;
+}
+[atributoB^="aber"] { /*É possível selecionar valores a partir do seu começo. No caso ao lado está selecionando todos os valores começados com "aber". Isso é possível por causa do ^  */
+    color:brown;
+}
+
+/*
+    Outros seletores de atributos são:
+    $ : Colocado antes do igual "=". Serve para selecionar valores de atributos que terminam com alguma coisa. Como exemplo: ol, ao, ...
+    * : Colocado antes do igual "=". Serve para selecionar valores de atributos que contém alguma coisa.
+*/

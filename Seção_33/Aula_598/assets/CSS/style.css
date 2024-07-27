@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.grid .col {
+  height: 300px;
+  padding: 15px;
+  float: left; /*Este comando float faz os objetos "flutuarem". O "left" é para a esquerda.*/
+}
+
+.grid .col-content {
+  width: 100%;
+  height: 100%;
+  background: red;
+}
+
+p {
+  clear: both; /*Este comando faz uma limpeza da área. Ou seja, ele anula o float. Para anular o float é mais eficiente fazer um clear em both (ambos os lados).*/
+}/*O comando clear faz com que a tag p vá para baixo da tag div (em vez do lado, como estava).*/
+
+
+@media all and (max-width: 320px) { 
+  .grid .col {
+    width: 100%;
+  }
+}
+/*O comando acima aplica uma configuração quando a condição é atendida.
+Quando a largura máxima for 320px aplique: Para o .grid.col, a largura será 100% em vez de 33.33%.*/
+
+@media all and (min-width: 321px) and (max-width: 768px) { 
+  .grid .col {
+    width: 40%;
+  }
+}
+/*O comando acima aplica uma configuração quando a largura for no mínimo 321 e no máximo 768 pixels.
+O  o .grid.col, a largura será de 40% ou dois quadrados na tela.*/
+
+@media all and (min-width: 769px) and (max-width: 1200px) { 
+  .grid .col {
+    width: 30%;
+  }
+}
+/*O comando "all" quer dizer todos os dispositivos.*/
+
+@media all and (min-width: 1201px) { 
+  .grid .col {
+    width: 20%;
+  }
+}

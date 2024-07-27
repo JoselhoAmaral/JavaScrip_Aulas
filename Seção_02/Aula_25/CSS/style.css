@@ -1,0 +1,14 @@
+*{
+    background-color: black;
+}
+
+body {
+    display: block;
+    height: 1000px;
+    width: 1000px;
+    background-color: aquamarine;
+    font-size: 28px;
+    display: flex;
+    border: 2px green;
+    justify-content: center center;
+}

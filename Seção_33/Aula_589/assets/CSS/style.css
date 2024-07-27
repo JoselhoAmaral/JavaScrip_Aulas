@@ -1,0 +1,24 @@
+ul li::after { /*O "::after" permite colocar elementos após o item indicado. Para o nosso caso são as li.*/
+    content: " - ";
+} /*OBS.: Nos pseudos elementos são usado "::". Funciona somente com ":", mas o correto é com dois.*/
+
+p::first-letter { /*Faz com que a primeira letra do p seja selecionada.*/
+    font-size: 80px;
+    display: block;
+    float: left; /*Faz a primeira letra selecionada ficar na esquerda do texto. */
+    margin: 0 10px 5px 0; /*Dá um espaçamento de 10px na direita e 5px em baixo.*/
+}
+
+p::first-line { /*Aplica o estilo na primeira linha do texto.*/
+    color: red;
+}
+
+p::selection { /*Aplica o estilo no texto que for selecionado com o cursor.*/
+    background: black;
+    color: white;
+}
+
+.texto::placeholder { /*Aplica estilo no placehouder.*/
+    color: red;
+    font-size: 18px;
+}

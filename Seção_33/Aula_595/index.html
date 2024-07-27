@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de medida no CSS(px,rem, em, vw, vh, %)</title>
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+</head>
+<body>
+    <h1>Absoluto</h1>
+    <p class="absoluto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero cumque ut obcaecati optio voluptate. Voluptatem, consequuntur! Ea ullam necessitatibus consequatur earum id cumque repellendus. Quam quo quas cupiditate odio in.</p>
+    <br>
+    <h1>Relativo</h1>
+    <h2>Unidade em</h2>
+    <div class="pai">
+        <p class="filho">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero cumque ut obcaecati optio voluptate. Voluptatem, consequuntur! Ea ullam necessitatibus consequatur earum id cumque repellendus. Quam quo quas cupiditate odio in.</p>
+    </div>
+
+    <br>
+    <h2>Unidade rem</h2>
+    <div>
+        <p class="filho-rem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero cumque ut obcaecati optio voluptate. Voluptatem, consequuntur! Ea ullam necessitatibus consequatur earum id cumque repellendus. Quam quo quas cupiditate odio in.</p>
+    </div>
+
+    <br>
+    <h2 id="inicial">Unidade vw e vh</h2>
+
+    <a href="#one">One</a> <!--Isso faz uma ação de levar até onde tem o id mensionado, nesse caso onde tem o id igual a one.-->
+    <a href="#two">Two</a>
+    <a href="#three">Three</a>
+    <div class="pai1" id="one">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero cumque ut obcaecati optio voluptate. Voluptatem, consequuntur! Ea ullam necessitatibus consequatur earum id cumque repellendus. Quam quo quas cupiditate odio in.</p>
+        <br>
+        <a href="#inicial">Voltar</a>
+    </div>
+    <div class="pai2" id="two">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero cumque ut obcaecati optio voluptate. Voluptatem, consequuntur! Ea ullam necessitatibus consequatur earum id cumque repellendus. Quam quo quas cupiditate odio in.</p>
+        <br>
+        <a href="#inicial">Voltar</a>
+    </div>
+    <div class="pai3" id="three">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero cumque ut obcaecati optio voluptate. Voluptatem, consequuntur! Ea ullam necessitatibus consequatur earum id cumque repellendus. Quam quo quas cupiditate odio in.</p>
+        <br>
+        <a href="#inicial">Voltar</a>
+    </div>
+
+    <br>
+    <h2>Unidade de porcentagem</h2>
+    <div class="pai-porcento">
+        <p class="filho-porcento">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero cumque ut obcaecati optio voluptate. Voluptatem, consequuntur! Ea ullam necessitatibus consequatur earum id cumque repellendus. Quam quo quas cupiditate odio in.</p>
+    </div>
+
+    <br>
+    <h2>Unidade vmax</h2>
+    <div class="pai-vmax">
+        <p class="filho-vmax">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero cumque ut obcaecati optio voluptate. Voluptatem, consequuntur! Ea ullam necessitatibus consequatur earum id cumque repellendus. Quam quo quas cupiditate odio in.</p>
+    </div>
+</body>
+</html>

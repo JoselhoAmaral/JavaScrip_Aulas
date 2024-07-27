@@ -1,0 +1,27 @@
+p:not(.doisQuarto) { /*A pseudo-classe not() está dizendo: aplique o estilo em todos os p, exceto o da classe "doisQuarto".*/
+    color:blue;
+}
+
+input:checked + p { 
+    background: red;
+}
+
+input:not(:checked) + p { /*Está código quer dizer: enquanto a checkbox não está marcada, deixe o background do próximo p amarelo.*/
+    background: yellow;
+}
+
+ul li:nth-child(odd){ /*A pseudo-classe nth-child() pode selecionar um conjunto de itens irmãos ou somente um item de um conjunto de irmãos. Nesse caso os impares.*/
+    background: purple;
+}
+
+ul li:nth-child(even){ /*Nesse caso os pares.*/
+    background: green;
+}
+
+ul li:nth-child(3n){ /*Nesse caso os "multiplos" de três.*/
+    background: blue;
+}
+
+ul li:nth-child(3n+9){ /*Nesse caso, a partir do nono item, seleciona os "multiplos" de três.*/
+    background: red;
+}

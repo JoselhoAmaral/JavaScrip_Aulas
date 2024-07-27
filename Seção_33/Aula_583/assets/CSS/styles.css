@@ -1,0 +1,37 @@
+/*Seletores básicos do CSS*/
+
+*{ /*Seleciona todos os itens*/
+    margin: 0;
+    padding: 0;
+}
+
+p, h1{ /*Aplica o estilo em todos os p e h1.*/
+    color: green;
+}
+
+body div section p,
+body div section h1
+{ /*Seleciona especificamente o p e o h1 do caminho citado.*/
+    color: red;
+}
+
+.heading{ /*Para selecionar classe sempre é com ponto.*/
+    color: purple;
+}
+
+.main-content h2 { /*Para selecionar uma tag é possível utilizar uma classe como caminho.*/
+    font-style: italic;
+}
+
+.main-content .text { /*Para selecionar uma classe é possível utilizar outra classe como caminho.*/
+    color: blue;
+}
+
+div{
+    color: initial; /*Esse comando faz com que as div filha não herdem a cor da fonte do pai. Para voltar como era pode mudar initial para inherit.*/
+}
+
+.pai > .filha { /*O simbolo > serve para dizer que expecificamente a classe filha foi selecionada. Se o caminho da classe filha for mudado, esse estilo atribuído não servirá.*/
+    color: darkviolet;
+}
+/*Outra observação é que existe herança de características de pai para filho*/

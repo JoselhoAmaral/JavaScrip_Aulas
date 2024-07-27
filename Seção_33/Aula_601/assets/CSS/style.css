@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body div{
+    background-color: red;
+    width: 150px; /*OBS.: Como eu retirei o margin e paddin, mesmo que eu aplique uma cor de background*/
+    height: 150px; /*não seria possível ver porque a div não tinha tamanho. Por isso define largura e altura para a div.*/
+    margin: 10px; /*Dá um espaçamento entre os blocos.*/
+    float: left; /*Flutua as div para a esquerda.*/
+
+}
+
+.border1 {
+    box-shadow: -5px -5px 0 0 blue; /*A sombra azul está na esquerda e em cima.*/
+}
+
+.border2 {
+    box-shadow: +5px +5px 0 0 blue; /*A sombra azul está na direita e em baixo.*/
+}
+
+.border3 {
+    box-shadow: +5px +5px 5px 0 blue; /*A sombra azul adiquire um efeito de blur... ou melhor, desfoque.*/
+}
+
+.border4 {
+    box-shadow: -5px -5px 5px 6px blue; /*Na última característica, a sombra fica como uma borda ou padding do elemento.*/
+}
+
+.border2 {
+    box-shadow: +5px +5px 0 0 blue, -5px -5px 0 0 rgba(0,0,0, 0.5); /*Também é possível adicionar mais do que uma sombra em um mesmo elemento.*/
+}

@@ -1,0 +1,55 @@
+*{
+    margin: 3px;
+    padding: 0;
+}
+
+.heading {
+    transition: all 1s ease-in-out; 
+} /*O comando acima faz com que o efeito do background demore 1 segundo para acionar. O comando "ease-in-out" é como o efeito ocorre.*/
+
+.heading:hover { /*A pseudo-classe houver faz com que exista uma reação quando passo o mause sobre a classe com o houver.*/
+    background: red;
+}
+
+a:link { /*Essa pseudo-classe serve para selecionar os links que nunca foram visitados*/
+    color: darkorange;
+}
+
+a:visited { /*Essa pseudo-classe serve para selecionar os links que foram visitados*/
+    color: deeppink;
+}
+
+a:hover { /*Faz com que ocorra uma mudança nas tags a quando o mause passa por cima.*/
+    background: darkslateblue;
+    color: white;
+    text-decoration: none; /*retira o sublinhado do link.*/
+}
+
+a:active { /*Faz com que ocorra uma mudança nas tags a quando clico em cima do link.*/
+    background: red;
+    color: white;
+    text-decoration: none; /*retira o sublinhado do link.*/
+}
+
+input:focus { /*Está pseudo-classe aplica uma mudança quando o input estiver em foco ou selecionado.*/
+    box-shadow: 0 0 15px rgba(0,0,0,0.5); /*O comando aplica uma sombra regulável.*/
+    border: 2px solid black;
+}
+
+input:disabled{ /*Está pseudo-classe aplica uma mudança quando o input estiver desabled. Também é possível colocar para input que estiver enable.*/
+    background: purple;
+    cursor: not-allowed; /*Esse comando faz com que o cursor tome a forma de "não permitido".*/
+}
+
+input:checked { /*Está pseudo-classe aplica uma mudança quando checkbox (nesse caso) estiver ativa.*/
+    width: 50px;
+    height: 50px;
+} /*Geralmente os input checkbox sempre estão em foco. Por isso o checkbox está com sombra.*/
+
+input:checked + p { /*Este comando aplica uma configuração no primeiro p após o input checado.*/
+    background: green;
+}
+
+.pai .lista li:last-child { /*Está pseudo-classe faz selecionar o último filho da classe lista. Tambem tem outras pseudo-classes desse tipo.*/
+    background: brown;
+}

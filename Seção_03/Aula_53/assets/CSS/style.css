@@ -1,0 +1,14 @@
+body {
+    background: rgb(3, 114, 90);
+}
+
+.add-tags {
+    background: white;
+    width: 50vw;
+    min-width: 500px;
+    min-height: 250px;
+    border-radius: 25px;
+    margin: 30px auto;
+    padding: 30px 50px;
+    font-size: 28px;
+}

@@ -1,0 +1,9 @@
+#texto{
+    color: red;
+    font-family: sans-serif;
+    font-size: 50px;
+} /*Só afeta a tag div que tem o id texto*/
+
+p {
+    font-size: initial; /*O comando initial serve para desativar a herança*/
+}/*O comando inherit serve para ativar a herança*/

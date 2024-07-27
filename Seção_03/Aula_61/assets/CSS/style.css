@@ -1,0 +1,33 @@
+body {
+    background: rgb(1, 107, 89);
+}
+
+.formulario {
+    background: white;
+    width: 50vw;
+    min-width: 500px;
+    min-height: 200px;
+    border-radius: 25px;
+    margin: 30px auto;
+    padding: 20px 20px;
+    font-size: 24px;
+}
+
+.butao {
+    width: 30vw;
+    min-width: 300px;
+    min-height: 50px;
+    border-radius: 25px;
+    font-size: 28px;
+}
+
+.resultado p {
+    background: white;
+    width: 50vw;
+    min-width: 500px;
+    min-height: 100px;
+    border-radius: 25px;
+    margin: 30px auto;
+    padding: 20px 20px;
+    font-size: 24px;
+}

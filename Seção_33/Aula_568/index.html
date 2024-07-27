@@ -1,0 +1,35 @@
+<!--Aula 568 - Atributos de id e class-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meu HTML</title>
+
+        <style> /*style == CSS*/
+            h1 { /*Seleciona o h1*/
+                background: red; /*Atribui a cor vermelha ao h1*/
+            }
+            p{
+                background: blue;
+            }
+            #cabecalho-um { /*Para selecionar o id, é necessário colocar "#"*/
+                background: purple;
+            }
+            .fundo-vermelho{ /*Para selecionar classe, usasse ".". A classe tem uma relevância menor que uma id, por isso o CSS aplicado em uma classe NÃO sobrescreve um CSS aplicado a uma id.*/
+                background: red;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 id="cabecalho-um" class="fundo-vermelho"> <!--O id é o identificador de uma tag. Cada item/tag só pode ter uma id.-->
+            Teste 01
+        </h1>
+        <h1 id="cabecalho-dois" class="fundo-vermelho"> <!--A mesma classe pode ser atribuída a mais de um item. Um item pode ter mais de uma classe.-->
+            Teste 02
+        </h1>
+        <p>Um texto qualquer</p>
+    </body>
+</html>

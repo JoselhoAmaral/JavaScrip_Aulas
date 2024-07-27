@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula: Tabelas  HTML</title>
+
+    <style>
+        .responsive-table{
+            max-width: 100%; /*Largura máxima de 100%*/
+            overflow-y: auto; /*Caso a tabela seje muito grande e passe o 100% da tela será imbuído na tabela a possibilidade de um scrow no eixo x ou horizontal.*/
+        }
+        table{
+            font-family: sans-serif;
+            width: 1000px;
+        }
+        table th, table td{
+            border: 1px solid gray;
+            padding: 5px;
+            text-align: left; /*Joga do o texto da th e td para a esquerda*/
+        }
+        table caption{
+            caption-side: top; /*Coloca a caption no topo da tabela*/
+            text-align: left; /*Coloca a caption para a esquerda*/
+            font-style: italic;
+            font-size: 14px;
+        }
+        table tfoot{
+            background: #ddd;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    
+    <div class="responsive-table"> <!--Tive que colocar a tabela dentro de uma div para deixar ela responsiva-->
+        <table>
+            <caption>Uma descrição da tabela</caption> <!--Título ou descrição da tabela-->
+            <thead> <!--Cabeçalho da tabela-->
+                <tr> <!--Linha-->
+                    <th>Título 1</th> <!--Coluna de título-->
+                    <th>Título 2</th>
+                    <th>Título 3</th>
+                </tr>
+            </thead>
+            <tbody> <!--Corpo da tabela-->
+                <tr>
+                    <td>Corpo 1</td> <!--Coluna de corpo. É diferente da coluna de título-->
+                    <td>Corpo 2</td>
+                    <td>Corpo 3</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Corpo 1</td> <!--O colspan me permite aumentar o tamanho de uma coluna-->
+                    <td rowspan="2">Corpo 3</td> <!--O Rowspan me permite aumentar o tamanho de uma linha-->
+                </tr>
+                <tr>
+                    <td>Corpo 1</td>
+                    <td>Corpo 2</td>
+                </tr>
+            </tbody>
+            <tfoot> <!--Rodapé-->
+                <tr>
+                    <td colspan="2", rowspan="2"></td>
+                    <td>Total:</td>
+                </tr>
+                <tr>
+                    <td>R$: 500,00</td>
+                </tr>        
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>

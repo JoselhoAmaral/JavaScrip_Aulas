@@ -1,0 +1,20 @@
+.questionario {
+    box-sizing: border-box; /*Este comando faz com que o padding e a border sejam calculados como o conteúdo. A margin não pode ser considerada como conteúdo, pois ela tem a função de evitar que os objetos encostem.*/
+    display: block; /*Isso é redundante, pois todas as div são display: block*/
+    background: green;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-style: arial;
+
+    max-width: 600px; /*Está é a largura máxima que a div pode chegar.*/
+    max-height: 100%; /*Está é a altura máxima que a div pode chegar. É difícil aplicar esse comando, pois é sub-entendido que não existe altura máxima por causa do scroll.*/
+
+    min-width: 0%; /*Está é a largura mínima que a div pode chegar. Isso é importante porque isso impede que o conteúdo dentro da div fique muito compactado.*/
+    min-height: 0%; /*Está é a altuma mínima da div. Isso é importante, porque se não existir esse comando, uma div sem conteúdo não existe na página.*/
+
+    overflow: auto; /*Este comando faz com que o texto que "vaze" fique: hidden = escondido, scroll = tenha guias ou auto = é o melhor*/
+    margin: 10px auto; /*Este comando faz com que a margem da p seje 10px em cima e em baixo e tenha o tamanho automático na direita e na esquerda de tal forma que a p fique fique sempre no meio da página.*/
+    padding: 10px; /*Este é o espaçamento entre o conteúdo e a border.*/
+    border: 5px solid black;
+}

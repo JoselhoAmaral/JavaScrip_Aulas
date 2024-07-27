@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula: Listas e Menus com HTML e CSS</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            background: rgba(255, 0, 0, 0.5); /*red,green,blue,opacidade*/
+
+            justify-content: left; /*Alinha os itens da nav na esquerda (horizontal)*/
+            align-items: center; /*Alinha os itens da nav em seu centro (Vertical)*/
+        }
+        body nav ul li a{ /*Aqui foi super especificado o caminho para atingir expecificamente a tag a da nav*/
+            color:white;
+            text-decoration: none;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            display: block; /*Transforma a tag a de inline em block*/
+            padding: 10px;
+            text-transform: uppercase; /*Coloca o texto em maiúsculo*/
+        }
+        nav ul{
+            list-style: none; /*Retira os estilos da ul*/
+            display: flex; /*Torna as lista de itens verticais em uma lista de itens na horizontal*/
+        }
+        nav a:hover{ /*Quando o mause passa em cima da tag a, é aplicado a configuração abaixo*/
+            background: rgba(0,0,0,0.4);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+        </ul>
+    </nav>
+
+    <ul> <!--Lista não ordenada-->
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <ol type="I" start="I"> <!--Lista ordenada. O Type é para o tipo de ordenação e o start é onde começa a contagem-->
+        <li>Item A</li>
+        <li>Item B</li>
+        <li>Item C</li>
+    </ol>
+
+    <dl> <!--Lista com descrição-->
+        <dt>Café</dt> <!--Item que será descrito-->
+        <dd>Bebida quente de coloração preta.</dd> <!--Descrição do item acima-->
+    </dl>
+</body>
+</html>

@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.flex-container {
+    display: inline-flex; /*O flex tem a propriedade de block. Já o inline-flex retira a propriedade block.*/
+    flex-direction: row; /*Muda o eixo principal. Pode ser coluna, linha ou outro. Ou seja, vertical ou horizontal.*/
+    justify-content: space-evenly; /*Organiza a distribuição de itens no eixo principal. Deixando no começo, fim, centro...*/
+    align-items: center; /*Muda a distribuição do eixo secundário (que é perpendicular ao eixo principal). Deixando no começo, fim, centro...*/
+    background: yellow;
+    height: 500px;
+    width: 250px;
+}
+
+.flex-item{
+    width: 100%;
+    background: red;
+    margin: 10px;
+}
+
+.flex-container1 {
+    display: flex;
+    justify-content: space-between; /*Organiza a distribuição de itens no eixo principal. Deixando no começo, fim, centro...*/
+    background: yellow;
+    flex-flow: row wrap;
+}
+
+.flex-item1{
+    flex-grow: 1; /*Quando 1 = Cada item pode ocupar um espaço maior. O espaço não ocupado é dividido igualmente entre os elementos.*/
+    flex-shrink: 0; /*Quando 0 = Não permite que os itens tenha seu tamanho diminuído em um valor menor do que o dado no flex-basis.*/
+    flex-basis: 320px; /*Faz com que o espaço inicial seja pré-determinado. Ou seja, faz com que cada item ocupe 320px.*/
+    flex: 1 0 320px; /*Este é um "atalho" para os três comandos acima.*/
+    height: 200px;
+    color: white;
+    background: red;
+}
+
+.flex-item1:nth-child(2) { /*Permite que eu selecione o segundo item do conjunto de itens.*/
+    flex: 2 1 320px; /*Isso faz com que o segundo item receba em dobro o espaço vago não ocupado.*/
+    background: purple;
+}
+
+
+/*No conteiner 2, aqui utilizamos o nth-child para mover cada elemento para uma possição diferente. Isso para mostrar que isso é possível com o disply: flex.*/
+.flex-container2 {
+    display: flex;
+    justify-content: space-between; /*Organiza a distribuição de itens no eixo principal. Deixando no começo, fim, centro...*/
+    align-items: flex-start;
+    background: yellow;
+    flex-flow: row nowrap;
+    height: 800px;
+}
+
+.flex-item2{
+    width: 100%;
+    color: white;
+    background: red;
+}
+
+.flex-item2:nth-child(3) {
+    align-self: flex-end;
+}
+
+.flex-item2:nth-child(2) {
+    align-self: stretch;
+}
+
+.flex-item2:nth-child(4) {
+    align-self: center;
+}
+
+/*No conteiner 3, aqui utilizamos o nth-child com o order para reordenar os itens. Isso para mostrar que isso é possível com o disply: flex.*/
+.flex-container3 {
+    display: flex;
+    justify-content: space-between; /*Organiza a distribuição de itens no eixo principal. Deixando no começo, fim, centro...*/
+    align-items: flex-start;
+    background: yellow;
+    flex-flow: row nowrap;
+    height: 200px;
+}
+
+.flex-item3{
+    width: 100%;
+    color: white;
+    background: red;
+}
+
+.flex-item3:nth-child(1) {
+    order: -1; /*Utilizei número negativo por escolha. Podemos utilizar números positivos também. A escolha é do programador.*/
+}
+
+.flex-item3:nth-child(2) {
+    order: -2;
+}
+
+.flex-item3:nth-child(3) {
+    order: 0;
+}

@@ -1,0 +1,12 @@
+<!--
+A aula fala sobre o grau de especificidade de um CSS. Onde cada vez mais baixo, mais importante:
+
+- Especificidade
+ID >>> Classes, Atributos e Pseudo-Classes >>> Elementos e Pseudo-Elementos 
+
+- Aplicação direta do "Style" código
+
+- Tag: !important
+
+Site: https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity
+-->

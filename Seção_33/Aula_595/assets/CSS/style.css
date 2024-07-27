@@ -1,0 +1,51 @@
+/*Existe dois tipos de medidas: absolutas e relativas.*/
+.absoluto {
+  font-size: 20px; /*A unidade de medida px (pixels) é absoluta.*/
+}
+
+/*-----------------------------------------------------------------*/
+.pai {
+  font-size: 50px; /*Unidade absoluta "pai".*/
+}
+.filho {
+  font-size: 0.5em; /*Isso quer dizer que filho tem fonte 0.5x50px. Isso porque em é relativo a unidade do pai.*/
+}
+/*-----------------------------------------------------------------*/
+html { /*Este é o root.*/
+  font-size: 20px;
+  scroll-behavior: smooth; /*É um efeito de transição de tela.*/
+}
+.filho-rem {
+  font-size: 1rem; /*A unidade rem usa as configurações do root como referêcia.*/
+}/*No caso acima a fonte é 1rem = 1x20px = 20px.*/
+/*-----------------------------------------------------------------*/
+.pai1 {
+  width: 80vw; /*Isso quer dizer 80% da largura visível da página.*/
+  height: 100vh; /*Isso quer dizer 100% da altura visível da página.*/
+  background: yellow;
+}
+.pai2 {
+  width: 80vw; 
+  height: 100vh; 
+  background: turquoise;
+}
+.pai3 {
+  width: 80vw; 
+  height: 100vh;
+  background: greenyellow;
+}
+/*-----------------------------------------------------------------*/
+.pai-porcento {
+  width: 25rem; /*Isso que dizer 25*20px = 500px*/
+  height: 100vh; /*Isso é 100% da altura visível*/
+  background: gray;
+}
+.filho-porcento {
+  width: 50%; /*A porcentagem trabalha se baseando nas propriedades do "pai". Portanto a largura é 250px*/
+  height: 50%; /*Como a altura do pai é 100% da altura visível, esse item tem 50% dessa largura.*/
+  background: blue;
+}
+/*-----------------------------------------------------------------*/
+.filho-vmax {
+  font-size: 2vmax; /*Isso quer dizer 2% do maior comprimento da página.*/
+} /*Isso quer dizer que o tamanho da fonte aumenta a medida que eu aumento o tamanho da página.*/

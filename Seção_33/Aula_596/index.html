@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades para textos</title>
+
+    <style>
+        .texto1 {
+            background: black;
+            color: white;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: bold; /*Nem toda fonte aceita um valor de 100 a 900 quanto ao negrito. É melhor simplesmente colocar bold para ddeixar negrito.*/
+            direction: ltr; /*Direção do texto. Nesse caso, da esquerda para a direita.*/
+            letter-spacing: 1px; /*Espaçamento entre as letras.*/
+            word-spacing: 5px; /*Espaçamento entre as palavras.*/
+            line-height: 25px; /*Altura da linha. Tem que ser maior que o tamanho da fonte. No caso a fonte é 20px.*/
+        }
+        .texto2 {
+            font-size: 20px;
+            text-align: left; /*Utilizado para o texto em si. Alinha ele a esquerda. Mas pode ser a direita ou outro.*/
+            text-decoration: underline; /*Coloca uma linha no texto que pode ser sublinhado, cortando ou em cima. Pode colocar mais de um também.*/
+            text-indent: 20px; /*Faz uma identação na primeira linha do parágrafo.*/
+            text-shadow: -2px 2px 5px red; /*Adiciona sombra. Configura: direita-esquerda cima-baixo esfumaçar cor.*/
+            text-transform: capitalize; /*Pode modificar o texto para ficar letra pequena, de forma, primeira palavra maiúscula, etc.*/
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <h1>Cabeçalho 1</h1>
+        <p class="texto1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod est obcaecati a iusto, eius recusandae reprehenderit blanditiis saepe magni, odio numquam neque ut eum eaque accusantium exercitationem. Eos, illo exercitationem.</p>
+    </div>
+
+    <div>
+        <h1>Cabeçalho 2</h1>
+        <p class="texto2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod est obcaecati a iusto, eius recusandae reprehenderit blanditiis saepe magni, odio numquam neque ut eum eaque accusantium exercitationem. Eos, illo exercitationem.</p>
+    </div>
+</body>
+</html>

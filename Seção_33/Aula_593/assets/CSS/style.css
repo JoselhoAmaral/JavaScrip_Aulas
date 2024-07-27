@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.grid .col {
+  display: block;
+  width: 300px;
+  height: 300px;
+  background: red;
+  margin: 10px;
+  float: left; /*Este comando float faz os objetos "flutuarem". O "left" é para a esquerda.*/
+}
+
+p {
+  clear: both; /*Este comando faz uma limpeza da área. Ou seja, ele anula o float. Para anular o float é mais eficiente fazer um clear em both (ambos os lados).*/
+}/*O comando clear faz com que a tag p vá para baixo da tag div (em vez do lado, como estava).*/
+
+/*
+display: block; Transforma os objetos em blocos com tamanho, altura e outras propriedades maleáveis.
+display: inline; Deixa o objeto em "linha", como um texto. Ocupa somente o seu espaço. Não dá para mexer na altura e outros.
+display: inline-block; Adiciona a propriedade dos dois acima, mas não é tão estável. Um pouco difícil de trabalhar.
+
+*/

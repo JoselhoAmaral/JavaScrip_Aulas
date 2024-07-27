@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 24px;
+}
+
+p {
+    margin-bottom: 24px;
+}
+
+.two-columns {
+    display: flex;
+}
+
+.two-columns .col {
+    display: flex;
+    flex-direction: column;
+    background-color: limegreen;
+    margin: 15px;
+    padding: 30px;
+}
+
+.gallery {
+    flex-flow: row wrap; /*linha quebra-linha*/
+    display: flex;
+}
+
+.gallery .img {
+    flex: 1 0 20%;
+    height: 50px;
+    background: blue;
+    margin: 10px;
+}
+
+/*Essa aula foi para mostrar as possibilidades do flex. Nesse caso, para os casos de colocar elementos um dentro do outro
+  é mais fácil utilizando flex do que grid. Fora que o flex é mais malável.*/

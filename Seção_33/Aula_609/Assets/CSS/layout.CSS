@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: sans-serif;
+    font-size: 40px;
+}
+
+.conteiner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: auto auto auto; /*Três linhas, uma para o cabeçario, uma para o conteúdo e a última para o rodapé.*/
+    grid-template-columns: 200px 1fr; /*Definiu duas colunas. A primeira menor e a segunda para navegação.*/
+    grid-template-areas: 
+    'header header'
+    'nav main'
+    'rodape rodape';
+    /*O comando acima serve para organizar as grid-area em um template.
+      repetimos o nome de uma área mais de uma vez para que ela ocupe mais espaço na mesma linha.
+      Como é possível ver acima, o grid-templete-areas funciona como uma tabela de excel sem tamanho definido, mas que podemos alocar áreas em "células".
+    */
+}
+
+.grid div:nth-child(1){
+    background: red;
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.grid div:nth-child(2){
+    background: yellow;
+    grid-area: nav;
+}
+.grid div:nth-child(3){
+    background: green;
+    grid-area: main;
+}
+.grid div:nth-child(4){
+    background: blue;
+    grid-area: rodape;
+}
+
+@media (max-width:768px) {
+    .grid {
+        display: grid;
+        grid-template-rows: auto auto auto; /*Três linhas, uma para o cabeçario, uma para o conteúdo e a última para o rodapé.*/
+        grid-template-columns: auto; /*deixa o tamanho da coluna como automático.*/
+        grid-template-areas: 
+        'header'
+        'nav'
+        'main'
+        'rodape';
+    }
+}
+/*O @media está aplicando uma regra para telas que tenham o tamanho máximo de 768px.*/

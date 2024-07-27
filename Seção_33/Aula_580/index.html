@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula: formulários e inputs HTML - parte 4</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        label{
+            cursor: pointer; /*Faz com que a tag label seje clicável*/
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="get" target="_blank" autocomplete="off"> <!--O parâmetro action pede o caminho para onde irei enviar o formulário. Já o method veremos depois. O target é somente para saber que o formulário foi enviado.-->
+        <p>O meu formulário</p>
+
+        <fieldset> <!--Esta tag serve para agrupar os  inputs-->
+            <legend>Descrição</legend>
+            <p>
+                <label>
+                    Nome: 
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome"> <!--id é o identificador. O name é utilizado no backend. Placeholder é um tipo de exemplo que fica dentro do input.-->
+                </label>
+            </p>
+            <p>
+                <label for="sobrenome"> <!--O for diz que essa label é destinada ao input com id= sobrenome-->
+                    Sobrenome: 
+                </label>
+                <input type="text" id="sobrenome" name="sobrenome" placeholder="Seu sobrenome"> <!--id é o identificador. O name é utilizado no backend. Placeholder é um tipo de exemplo que fica dentro do input.-->
+
+            </p>
+            <p>
+                <label for="dev">Sou um Dev</label>
+                <input type="checkbox" id="dev" name="dev" value="Sim">
+            </p>
+            <p>
+                Gênero:<br>
+                <label for="feminino">Feminino</label>
+                <input type="radio" id="feminino" name="genero" value="feminino"><br>
+                <!--O value é o valor que chegará para o servidor-->
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="masculino" name="genero" value="masculino"><br>
+
+                <label for="outro">Outro</label>
+                <input type="radio" id="outro" name="genero" value="outro">
+            </p><!--No input do tipo radio, devemos deixar o name igual para todos os itens.-->
+
+            <p>
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data"> 
+            </p>
+            <p>
+                <label for="dataHora">Data e Hora:</label>
+                <input type="datetime-local" id="dataHora" name="dataHora"> 
+            </p>
+            <p>
+                <label for="horario">Horário:</label>
+                <input type="time" id="horario" name="horario"> 
+            </p>
+
+            <p>
+                <label for="cor">Escolha uma cor:</label>
+                <input type="color" id="cor" name="cor"> 
+            </p>
+
+            <p>
+                <label for="email">Digite seu email:</label>
+                <input type="email" id="email" name="email" placeholder="Ex.: exemplo@exemplo.com"> 
+            </p>
+
+            <p>
+                <label for="file">Sua foto:</label>
+                <input type="file" id="file" name="file" accept=".png,.svg,image/*"> 
+            </p> <!--O accept me permite escolher os tipos de imagem que posso aceitar. O termo "image/*" quer dizer que posso aceitar todos os tipos de imagem.-->
+
+            <p>
+                <label for="number">Número:</label>
+                <input type="number" id="number" name="number" placeholder="Digite um número" min="0" max="999999999999999999"> 
+            </p>
+
+            <p>
+                <label for="senha">Digite sua senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha"> 
+            </p>
+
+            <p>
+                <label for="range">Range:</label>
+                <input type="range" id="range" name="range" min="0" max="100" step="1" list="tickmarcks">
+                
+                <datalist id="tickmarcks">
+                    <option value="0" label="0%"></option>
+                    <option value="25" label="25%"></option>
+                    <option value="50" label="50%"></option>
+                    <option value="75" label="75%"></option>
+                    <option value="100" label="100%"></option>
+                </datalist>
+            </p> <!--Este input cria um range de 0 a 100 com passo de 1 em 1. A tag datalist adiciona traços na escala de 0 a 100, mas não funciona tão bem.-->
+
+            <p>
+                <label for="url">Digite sua url:</label>
+                <input type="url" id="url" name="url" placeholder="Exemplo.: https://exemplo"> 
+            </p>
+
+            <p>
+                <label for="procurar">Pesquisar:</label>
+                <input type="search" id="procurar" name="procurar" placeholder="Procurar por..."> 
+            </p>
+
+            <p>
+                <label for="select">Selecione uma opção:</label>
+                <select id="select" name="select">
+                    <optgroup label="Cores">
+                        <option value="Vermelho">Vermelho</option>
+                        <option value="Verde">Verde</option>
+                        <option value="Azul">Azul</option>
+                    </optgroup>
+                    <optgroup label="Tonalidades">
+                        <option value="Claro" label="Claro"></option> <!--É possível utilizar label também na tag option-->
+                        <option value="Escuro" label="Escuro"></option>
+                    </optgroup>
+                </select>
+            </p><!--Não é considerado um input. É possível desabolitar uma opção com disable ou deixar pré selecionada uma opção com selected-->
+
+            <p>
+                <label for="textarea">Conte mais:</label>
+                <textarea name="textarea" id="textarea" rows="10" cols="30">
+
+                </textarea>
+            </p> <!--Não é considerado um input.-->
+
+            <p>
+                <button type="reset">Reset</button> <!--Reseta todo o formuário-->
+                <button type="submit">Enviar</button> <!--Envia os dados digitados-->
+            </p>
+        </fieldset>
+    </form>
+
+    <!--
+        Links interessantes para ver
+        https://www.w3schools.com/html/html_form_input_types.asp
+        https://developer.mozilla.org/pt-BR/docs/Learn/Forms/How_to_structure_a_web_form
+    -->
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao CSS Box-Model</title>
+
+    <style>
+        *{ /*O asterisco faz a seleção de todos os itens*/
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /*Este comando o boder e padding ser considerados no comando width e height*/
+        }
+
+        .section-one{ 
+            background: deeppink; /*Torna o fundo da tag rosa*/
+            color: white; /*Muda a cor da fonte para branco*/
+            
+            width: 250px; /*Para a largura*/
+            height: 230px; /*Para a altura*/
+            border: 5px solid black;  /*Borda de 5px em estado solido e na cor preta*/
+            padding: 15px 10px 12px 10px; /*O padding é o espaçamento interno do conteúdo. Funciona: ^ > v <*/
+            margin: 20px; /*A margem é usada para separar as tags. OBS: A margin das tags não se somam*/
+            
+            background-image: url(https://st.depositphotos.com/1000124/1889/i/950/depositphotos_18891735-stock-photo-forest-trees.jpg); /*Usado para colocar uma imagem de fundo*/
+            background-size: cover; /*Faz a imagem se ajustar dentro da section*/
+            background-position: center center; /*Faz a imagem se ajustar ao centro da tag na horizontal e vertical por causa do center center*/
+        }
+
+        .section-two{
+            background: cyan;
+        }
+    </style>
+</head>
+<body>
+    <section class="section-one">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium reprehenderit saepe eius ipsum. Veritatis blanditiis nobis consectetur. Veritatis doloremque ducimus id excepturi minus eius tempore, minima nulla assumenda vitae reprehenderit.
+    </section> <!--Seção é parecido com a tag <div>, porém <section> é semântico-->
+    <section class="section-two">Number Two</section>
+    <!-- -->
+</body>
+</html>

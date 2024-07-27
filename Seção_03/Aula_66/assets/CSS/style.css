@@ -1,0 +1,46 @@
+body {
+    background-color: rgb(0, 84, 90);
+    width: 100vw;
+    height: 100vh;
+}
+
+.principal {
+    width: 500px;
+    min-width: 300px;
+    min-height: 150px;
+    background: rgb(170, 184, 184);
+    border-radius: 30px;
+    margin: 30px auto;
+    padding: 50px 100px;
+}
+
+.paragrafo-timer {
+    font-size: 40px;
+    min-width: 200px;
+    margin: center auto;
+    padding-left: 31%;
+    border-bottom : 5px black solid;
+}
+
+#timer {
+    font-size: 48px;
+    padding-left: 32%;
+    border-radius: 10px;
+}
+
+.iniciar, .pausar, .parar {
+    font-size: 36px;
+    border-radius: 7px;
+    margin-left: 5%;
+    background: rgb(170, 184, 184);
+}
+
+.timer-iniciado {
+    background: greenyellow;
+}
+.timer-pausado {
+    background: yellow;
+}
+.timer-parado {
+    background: red;
+}

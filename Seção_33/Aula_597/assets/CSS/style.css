@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+}
+
+.pai {
+  height: 300vh; /*Faz o elemento ter 3 vezes o tamanho da página. (300% do "view port")*/
+}
+
+.filha1, .filha2, .filha3 {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  position: static; /*Este comando faz o elemento ficar parado no lugar onde é criado ou no último local que foi movido antes desse comando.*/
+}
+
+.filha1 {
+  background: rgba(255, 0, 0, 0.5);
+}
+
+.filha2 {
+  position: absolute;
+  background: greenyellow;
+  z-index: -1; /*O navegador tem camadas. Esse comando coloca o "filha2" na camada -1. Ficando atrás do texto.*/
+}
+
+.filha1 {
+  position: relative; /*Me permite mudar o elemento de local mantendo ocupado sua posição original.*/
+  position: absolute; /*Me permite mudar o elemento de local, mas sua posição original é retirada. O elemento fica flutuando na página.*/
+  top: 100px; /*Aplica 100px de distância entre o topo da página e o elemento.*/
+  left: 50px; /*Aplica 50px de distância entre a direita da página e o elemento.*/
+  z-index: 2; /*O navegador tem camadas. Esse comando coloca o "filha1" na camada 2.*/
+
+}
+
+.filha3 {
+  top: 50px; /*O "filha3" está na camada 1 e está tomando uma distância de 50px da tag p acima dele.*/
+  background: blue;
+  position: relative; /*Me permite mudar o elemento de local mantendo ocupado sua posição original.*/
+}
+
+.neta1 {
+  background: white;
+  top: 100px;
+  left: 100px;
+  position: absolute;
+  /*Esse comando não é aplicado, pois a div "neta1" está dentro da div "filho3" que tem posição relativa.
+    Isso faz a "neta1" herdar a posição relativa do "filho3" e não permite aplicar outro tipo de posicionamento.*/
+}
+
+.filha4 {
+  background: violet;
+  position: fixed; /*Este comando fica o elemento em uma posição da página. Então mesmo que você role a página, ele ficará fixo lá.*/
+  top: 10%;
+  left: 30%;
+  width: 200px;
+  height: 200px;
+}
+
+.pai2 {
+  height: 150vh; /*Faz o elemento ter 3 vezes o tamanho da página. (300% do "view port")*/
+}
+
+ul {
+  height: 100px;
+  overflow-y: auto; /*Adiciona rolagem a lista.*/
+}
+
+.sticky {
+  position: sticky;
+  /*O comando acima congela um elemento de uma lista de elementos. Como exemplo usamos a lista de contatos. O ideal é ver o exemplo pois é difícil explicar.*/
+  background: gray;
+  top: 0; /*Faz os itens com a class sticky ficar no topo da listagem.*/
+}
