@@ -34,4 +34,4 @@
  console.log(p1.imc); // o .imc() era um metodo e passou a ser atributo .imc
  p1.nomeCompleto = 'Jonathan Oliveira Melo'; // Envia esse nome para o objeto p1 pelo metodo setter.
  console.log(p1.nome); // O metodo .nomeCompleto decompoe o nome em nome e sobrenome.
- console.log(p1.sobrenome);
+ console.log(p1.sobrenome); 
