@@ -1,27 +1,21 @@
-// Proxima aula 
 // Para instalar o nodemon: npm i nodemon --save-dev
 // O "--save-dev" eh para salvar o nodemon como pacote de desenvolvimento
 // O nodemon eh usado no terminal usando: npx nodemon (nome do arquivo)
-
-/* No arquivo package.json
-Podemos trocar "start": "node server.js" por "start": "nodemon server.js"
-e iniciamos o arquivo dessa forma no terminal:
-npm start
-*/
 
 // Aqui estamos criando uma pagina web.
 
 const express = require('express');
 const app = express();
 
-/*
-         Criar, ler, Atualizar, Deletar
-CRUD --> Creat, Read, Update, Delete
-         Post,  Get,   Put,   Delete
+app.use(
+    express.urlencoded({
+        extended: true
+    })
+); // Esse comando eh para tratar o request.body (trata formularios)
 
-https://meusite.com/ <- Get -> Entregue a pagina /
-https://meusite.com/sobre <- Get -> Entregue a pagina /sobre
-https://meusite.com/contato <- Get -> Entregue a pagina /contato
+/*
+http://facebook.com/profiles/1234567  --> http://facebook.com/profiles/(parametro)
+http://facebook.com/profiles/1234567?campanha=googleads&nome_campanha=seila --> http://facebook.com/profiles/1234567?(queryStrings)&(queryStrings)
 */
 
 // metodo get
@@ -32,17 +26,26 @@ app.get('/', (request, response) => { // Essa eh a pagina raiz '/'.
             CPF: <input type="text" name= "cpf"><br>
             <button>Enviar Fomulário</button>
         </form>
-        `);
+    `);
 });
+
+/*
+app.get('/testes/:idUsusarios?/:nome?', (requisicao, resposta) => { // para adicionar parametros "/:(parametro)?"
+    console.log(requisicao.params); //mostra os paramtreos recebidos
+    resposta.send(requisicao.params); // envia uma resposta que nesse caso eh um json com os parametros
+}); // Para acessar eh http://localhost:3000/testes/(parametro qualquer: 2644)/(parametro qualquer: 8386426)
+*/
+
+app.get('/testes/:idUsusarios?/:nome?', (requisicao, resposta) => { // para adicionar parametros "/:(parametro)?"
+    console.log(requisicao.query);
+    resposta.send(requisicao.query); // Aqui eh para mostrar as query strings recebidas
+}); // Para acessar eh http://localhost:3000/testes/?nome=Joselho&sobrenome=Amaral
 
 // metodo post
 app.post('/', (request, response) => { // recebe dados da raiz '/'.
-    response.send('Recebi o formulario!');
-});
-
-app.get('/contato', (request, response) => { // Essa pagina eh a de contato
-    response.send('Obrigado por entrar em contato conosco.')
-});
+    console.log(request.body); // request.body mostra os dados no body da pagina. 
+    response.send(`Os valores enviados foram: ${request.body.nome}`); // aqui estou enviando uma resposta para pagina com os dados recebido em nome.
+});// esse nome de "request.body.nome" eh o presente em (Nome: <input type="text" name= "nome"><br>)
 
 app.listen(3000, () => {
     console.log('Acessar http://localhost:3000');
