@@ -1,4 +1,4 @@
-// Express - Webpack
+// Express Middlewars
 // para instalar o EJS via terminal: npm i ejs
 
 // Aqui estamos criando uma pagina web.
