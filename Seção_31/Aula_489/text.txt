@@ -1,0 +1,4 @@
+Relacionamento entre as entidades (Tabelas)
+
+Será usado a notação de "pé de galinha"
+Os relacionamentos pode ser dividi entre: um para um, um para muitos e muitos para muitos.

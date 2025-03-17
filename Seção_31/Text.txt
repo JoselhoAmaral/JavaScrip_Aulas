@@ -1,0 +1,1 @@
+Essa seção fala sobre Base de Dados Relacionais - SQL (MySQL) e MariaDB

@@ -1,0 +1,4 @@
+Essa aula fala sobre  Entidades (Tabelas).
+
+PK - Primary Key = Chave primária
+FK - Chave Estrangeira
